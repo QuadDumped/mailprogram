@@ -1,0 +1,28 @@
+﻿<Window x:Class="MailProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailProgram"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="true"
+        Background="Transparent"
+        MouseDown="Window_MouseDown"
+    Title="MainWindow" Height="371" Width="760">
+
+    <Border CornerRadius="28" BorderBrush="Black" BorderThickness="0" Background="#FF68B5E8">
+        <Grid Margin="0,0,-6.667,-19.333" HorizontalAlignment="Left" Width="760" Initialized="Grid_Initialized">
+            <Label Content=" Mail Program" Margin="105,0,421,0" VerticalAlignment="Top" Height="61" FontSize="36" FontFamily="Segoe UI Semilight" Cursor="SizeAll" Foreground="White"/>
+            <ListBox x:Name="box" Height="276" Margin="105,61,-103,0" VerticalAlignment="Top" SelectionChanged="ListBox_SelectionChanged"  FontFamily="Nirmala UI" AlternationCount="100" HorizontalAlignment="Left" Width="616" BorderThickness="0"/>
+            <Button x:Name="skriv" Content=" Create 📝" HorizontalAlignment="Left" Margin="5,61,0,0" VerticalAlignment="Top" Width="100" Height="28" Click="Skriv_Click" BorderThickness="0"  FontSize="18" Background="Transparent" Foreground="#FFFAFAFA"/>
+            <Button x:Name="inbox" Content="Inbox 📥" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="90" Click="Inbox_Click_1" Height="28" Background="Transparent" BorderThickness="0" FontSize="18" UseLayoutRounding="False" Foreground="White"/>
+            <Button x:Name="sort" Content="Sort ⇅" HorizontalAlignment="Left" Margin="105,337,0,0" VerticalAlignment="Top" Width="75" Click="Sort_Click" Height="28" Background="Transparent" BorderThickness="0" FontSize="18" UseLayoutRounding="False" Foreground="White" Visibility="Hidden"/>
+            <Button Style="{StaticResource ExitButtonStyle}" Content="🗙" HorizontalAlignment="Left" Margin="704,10,0,0" VerticalAlignment="Top" Width="32" Background="Transparent" Height="34" FontSize="18" BorderThickness="0" BorderBrush="Transparent" Click="Button_Click_1"/>
+            <Button Style="{StaticResource ExitButtonStyle}" Content="−" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="32" Background="Transparent" Height="31" FontSize="22" BorderThickness="0" BorderBrush="Transparent" Click="Button_Click" Margin="672,10,0,0" FontWeight="Bold"/>
+            <Label x:Name="time" Content="" Margin="480,10,88,0" VerticalAlignment="Top" Height="46" FontSize="24" FontFamily="Segoe UI Semilight" Cursor="SizeAll" Foreground="White"/>
+
+        </Grid>
+    </Border>
+</Window>
+
